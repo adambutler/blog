@@ -1,3 +1,4 @@
 name: Lab.io
 markdown: redcarpet
 pygments: true
+baseurl: /blog
