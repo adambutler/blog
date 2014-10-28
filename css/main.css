@@ -49,6 +49,14 @@ ul.posts span {
   width: 150px;
 }
 
+@media all and (max-width: 768px) {
+  ul.posts span {
+    margin-top: 20px;
+    display: block;
+    width: auto;
+  }
+}
+
 /*****************************************************************************/
 /*
 /* Site
@@ -58,10 +66,12 @@ ul.posts span {
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 57em;
+  width: 60em;
   margin: 3em auto 2em;
   line-height: 1.5em;
   max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .site .header a {
