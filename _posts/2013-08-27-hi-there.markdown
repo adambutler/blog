@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Hi There!"
-date:   2013-08-27 21:52:56
----
-
-I'll be posting more up here in the coming days so hold tight. In the meantime you can visit
-my [GitHub](http://github.com) to see my open-source projects or drop me an e-mail on adam@lab.io
