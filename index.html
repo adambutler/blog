@@ -6,15 +6,15 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.categories.projects %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  {% for project in site.categories.projects %}
+    <div class="card">
+      <img src="/assets/{{ project.image }}">
+      <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
         </h2>
-      </li>
+      </div>
     {% endfor %}
   </ul>
 
