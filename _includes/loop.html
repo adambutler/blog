@@ -1,0 +1,16 @@
+<div class="row row--fluid">
+  {% for datum in loop_data %}
+    {% if forloop.first and loop_has_featured %}
+      <div class="column medium-12 large-8 xlarge-6">
+    {% else %}
+     <div class="column medium-12 large-4 xlarge-3 {% if forloop.last %}end{% endif %}">
+    {% endif %}
+      <a href="{{ datum.location | prepend: "http://" }}" class="post" style="background-image: url(/assets/{{ datum.image }});">
+        <div class="post__body">
+          <span class="post-meta">{{ datum.location }}</span>
+          <h2>{{ datum.title }}</h2>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</div>

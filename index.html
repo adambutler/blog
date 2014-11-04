@@ -2,23 +2,59 @@
 layout: default
 ---
 
-<div class="home">
+<h1>Projects</h1>
 
-  <h1 class="page-heading">Posts</h1>
+{% assign loop_data=site.categories.projects %}
+{% assign loop_has_featured=true %}
+{% include loop.html %}
 
-  {% for project in site.categories.projects %}
-    <div class="card">
-      <img src="/assets/{{ project.image }}">
-      <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-        </h2>
+<div class="row">
+  <div class="column small-12 large-6">
+    <h1>Talks</h1>
+    {% for talk in site.categories.talks %}
+      <div class="spacious">
+        <small>
+          {% assign d = talk.date | date: "%-d"  %}
+          {{ talk.date | date: "%B" }}
+          {% case d %}
+            {% when '1' or '21' or '31' %}{{ d }}st
+            {% when '2' or '22' %}{{ d }}nd
+            {% when '3' or '23' %}{{ d }}rd
+            {% else %}{{ d }}th
+            {% endcase %}
+          {{ talk.date | date: "%Y" }}
+          {% if talk.event %}
+            - {{ talk.event }}
+          {% endif %}
+        </small><br><a href="{{ talk.slides }}">{{ talk.title }}</a>
       </div>
     {% endfor %}
-  </ul>
-
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  </div>
+  <div class="column small-12 large-6">
+    <h1>Articles</h1>
+    {% for article in site.categories.articles %}
+      <div class="spacious">
+        <small>
+          {% assign d = article.date | date: "%-d"  %}
+          {{ article.date | date: "%B" }}
+          {% case d %}
+            {% when '1' or '21' or '31' %}{{ d }}st
+            {% when '2' or '22' %}{{ d }}nd
+            {% when '3' or '23' %}{{ d }}rd
+            {% else %}{{ d }}th
+            {% endcase %}
+          {{ article.date | date: "%Y" }}
+          {% if article.event %}
+            - {{ article.event }}
+          {% endif %}
+        </small><br><a href="{{ article.link }}">{{ article.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
 </div>
+
+<h1>Experiments<br><small>Experiments are ordered from useless to very useless</small></h1>
+
+{% assign loop_data=site.categories.experiments %}
+{% assign loop_has_featured=false %}
+{% include loop.html %}

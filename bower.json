@@ -1,0 +1,12 @@
+{
+  "name": "blog",
+  "version": "2.0.0",
+  "homepage": "http://lab.io",
+  "authors": [
+    "Adam Butler <adam@lab.io>"
+  ],
+  "description": "The personal blog of Adam Butler <adam@lab.io>",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true
+}
