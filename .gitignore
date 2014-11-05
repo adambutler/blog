@@ -1,2 +1,6 @@
 _site
 .sass-cache
+assets/instagram/_unused
+*.mp4
+*.ogv
+*.webm
