@@ -5,7 +5,11 @@
     {% else %}
      <div class="column medium-12 large-4 xlarge-3 {% if forloop.last %}end{% endif %}">
     {% endif %}
-      <a href="{{ datum.location | prepend: "http://" }}" class="post" style="background-image: url(/assets/{{ datum.image }});">
+      {% if datum.location %}
+        <a href="{{ datum.location | prepend: "http://" }}" class="post" style="background-image: url(/assets/{{ datum.image }});">
+      {% else %}
+        <a href="{{ datum.link }}" class="post" style="background-image: url(/assets/{{ datum.image }});">
+      {% endif %}
         <div class="post__body">
           <span class="post-meta">{{ datum.location }}</span>
           <h2>{{ datum.title }}</h2>
