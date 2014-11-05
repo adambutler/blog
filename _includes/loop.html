@@ -5,11 +5,20 @@
     {% else %}
      <div class="column medium-12 large-4 xlarge-3 {% if forloop.last %}end{% endif %}">
     {% endif %}
-      {% if datum.location %}
-        <a href="{{ datum.location | prepend: "http://" }}" class="post" style="background-image: url(/assets/{{ datum.image }});">
-      {% else %}
-        <a href="{{ datum.link }}" class="post" style="background-image: url(/assets/{{ datum.image }});">
-      {% endif %}
+      <a
+        href="{% if datum.location %}{{ datum.location | prepend: 'http://' }}{% else %}{{ datum.link }}{% endif %}"
+        class="post"
+        style="background-image: url(/assets/{{ datum.image }});"
+      >
+        {% if datum.video %}
+        <div class="post__video">
+          <video autoplay="autoplay" width="100%" muted loop>
+            <source src="{{ datum.video }}.mp4" type="video/mp4" />
+            <source src="{{ datum.video }}.webm" type="video/webm" />
+            <source src="{{ datum.video }}.ogv" type="video/ogg" />
+          </video>
+        </div>
+        {% endif %}
         <div class="post__body">
           <span class="post-meta">{{ datum.location }}</span>
           <h2>{{ datum.title }}</h2>
