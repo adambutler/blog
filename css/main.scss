@@ -48,6 +48,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 17px;
+}
+
 small {
   color: #777;
 }
@@ -67,6 +71,16 @@ small {
 
 .row--fluid {
   max-width: none;
+}
+
+.avatar {
+  border-radius: 100%;
+  width: 200px;
+  margin: $spacing 0;
+}
+
+.text--centered {
+  text-align: center;
 }
 
 .sidebar {
