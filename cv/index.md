@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cv
 ---
 
 <div class="text--centered">
