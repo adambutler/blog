@@ -9,7 +9,7 @@ layout: default
 {% include loop.html %}
 
 <div class="row">
-  <div class="column small-12 large-6">
+  <div class="column small-12 large-6 animation--fade-in">
     <h1>Talks</h1>
     {% for talk in site.categories.talks %}
       <div class="spacious">
@@ -30,7 +30,7 @@ layout: default
       </div>
     {% endfor %}
   </div>
-  <div class="column small-12 large-6">
+  <div class="column small-12 large-6 animation--fade-in">
     <h1>Articles</h1>
     {% for article in site.categories.articles %}
       <div class="spacious">

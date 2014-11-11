@@ -3,7 +3,15 @@
 
 $ ->
   $('.post').on 'mouseover', ->
-    $(@).find('video')[0].muted = false
+    video = $(@).find('video')[0]
+    video.muted = false if video?
 
   $('.post').on 'mouseout', ->
-    $(@).find('video')[0].muted = true
+    video = $(@).find('video')[0]
+    video.muted = true if video?
+
+  $('.post').each (index) ->
+    $(@).addClass 'post--hidden'
+    setTimeout =>
+      $(@).addClass 'post--shown'
+    , (index * 100) + 300
