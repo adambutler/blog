@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>Projects</h1>
+<h1 id="projects">Projects</h1>
 
 {% assign loop_data=site.categories.projects %}
 {% assign loop_has_featured=false %}
@@ -10,7 +10,7 @@ layout: default
 
 <div class="row">
   <div class="column small-12 large-6 animation--fade-in">
-    <h1>Talks</h1>
+    <h1 id="talks">Talks</h1>
     {% for talk in site.categories.talks %}
       <div class="spacious">
         <small>
@@ -31,7 +31,7 @@ layout: default
     {% endfor %}
   </div>
   <div class="column small-12 large-6 animation--fade-in">
-    <h1>Articles</h1>
+    <h1 id="articles">Articles</h1>
     {% for article in site.categories.articles %}
       <div class="spacious">
         <small>
@@ -53,13 +53,13 @@ layout: default
   </div>
 </div>
 
-<h1>Experiments<br><small>Experiments are ordered from useless to very useless</small></h1>
+<h1 id="experiments">Experiments<br><small>Experiments are ordered from useless to very useless</small></h1>
 
 {% assign loop_data=site.categories.experiments %}
 {% assign loop_has_featured=false %}
 {% include loop.html %}
 
-<h1>Hacks</h1>
+<h1 id="hacks">Hacks</h1>
 
 {% assign loop_data=site.categories.hacks %}
 {% assign loop_has_featured=false %}
