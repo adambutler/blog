@@ -6,7 +6,12 @@
      <div class="column medium-12 large-4 xlarge-3 {% if forloop.last %}end{% endif %}">
     {% endif %}
       <a
-        href="{% if datum.location %}{{ datum.location | prepend: 'http://' }}{% else %}{{ datum.link }}{% endif %}"
+        href="
+          {% if datum.link %}
+            {{ datum.link | prepend: 'http://' }}
+          {% elsif datum.location %}
+            {{ datum.location | prepend: 'http://' }}
+          {% endif %}"
         class="post"
         style="background-image: url(/assets/{{ datum.image }});"
       >
