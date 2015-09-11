@@ -26,7 +26,13 @@ layout: default
           {% if talk.event %}
             - {{ talk.event }}
           {% endif %}
-        </small><br><a href="{{ talk.slides }}">{{ talk.title }}</a>
+        </small><br>
+        {% if talk.slides %}
+          <a href="{{ talk.slides }}">{{ talk.title }}</a>
+        {% else %}
+          <a href="{{ talk.url }}">{{ talk.title }}</a>
+        {% endif %}
+
       </div>
     {% endfor %}
   </div>
