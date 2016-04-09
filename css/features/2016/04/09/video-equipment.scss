@@ -119,3 +119,17 @@ $total-height: 5530;
   bottom: video-equipment-bottom-percentage(5530);
 }
 
+table {
+  width: 100%;
+  th {
+    text-align: left;
+  }
+
+  tr {
+    border-bottom: 1px solid #eee;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
