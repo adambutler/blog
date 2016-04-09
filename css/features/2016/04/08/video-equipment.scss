@@ -1,0 +1,121 @@
+---
+# Video equipment Feature Styling
+---
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+$sidebar-width: 280px;
+$spacing: 20px;
+
+@media all and (max-width: 1360px) {
+  body {
+    min-width: 1135px;
+    .sidebar {
+      position: static;
+      width: auto;
+    }
+
+    .main {
+      position: static;
+      width: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+
+#video-equipment {
+  position: relative;
+  margin: 50px 0;
+}
+
+#video-equipment-images {
+  @extend .cf;
+  position: relative;
+  width: 50%;
+  padding-bottom: 517.790262172% * 0.5;
+  background-image: url(/assets/features/Group.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+$total-height: 5530;
+
+@function video-equipment-top-percentage($top-px) {
+  @return $top-px / $total-height * 100%;
+}
+
+@function video-equipment-bottom-percentage($bottom-px) {
+  @return 100% - ($bottom-px / $total-height * 100%);
+}
+
+#video-equipment-sections {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+
+  > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+
+#video-equipment-section-1 {
+  top: video-equipment-top-percentage(0);
+  bottom: video-equipment-bottom-percentage(484);
+}
+
+#video-equipment-section-2 {
+  top: video-equipment-top-percentage(745);
+  bottom: video-equipment-bottom-percentage(1380);
+}
+
+#video-equipment-section-3 {
+  top: video-equipment-top-percentage(1626);
+  bottom: video-equipment-bottom-percentage(2028);
+}
+
+#video-equipment-section-4 {
+  top: video-equipment-top-percentage(2147);
+  bottom: video-equipment-bottom-percentage(2691);
+}
+
+#video-equipment-section-5 {
+  top: video-equipment-top-percentage(2868);
+  bottom: video-equipment-bottom-percentage(3362);
+}
+
+#video-equipment-section-6 {
+  top: video-equipment-top-percentage(3597);
+  bottom: video-equipment-bottom-percentage(4088);
+}
+
+#video-equipment-section-7 {
+  top: video-equipment-top-percentage(4118);
+  bottom: video-equipment-bottom-percentage(4873);
+}
+
+#video-equipment-section-8 {
+  top: video-equipment-top-percentage(5000);
+  bottom: video-equipment-bottom-percentage(5530);
+}
+

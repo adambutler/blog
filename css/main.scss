@@ -238,3 +238,18 @@ small {
 //   margin-right: $spacing;
 //   border: 4px solid #ddd;
 // }
+
+table {
+  width: 100%;
+  th {
+    text-align: left;
+  }
+
+  tr {
+    border-bottom: 1px solid #eee;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
